@@ -1,9 +1,14 @@
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-
-@Data public class CarWithLombok {
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Data  public class CarWithLombok {
   private String model;
+
+  @EqualsAndHashCode.Include
   private String brand;
+
+
   private int year;
   private int price;
   private String color;
